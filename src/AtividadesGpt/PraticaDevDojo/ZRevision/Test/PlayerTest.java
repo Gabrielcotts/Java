@@ -6,18 +6,20 @@ import java.util.Scanner;
 
 public class PlayerTest {
     public static void main(String[] args) {
-        Player player = new Player();
         Scanner scanner = new Scanner(System.in);
 
-        Player[] players = {player};
+        Player[] jogadores = new Player[11];
 
-        for (Player player1 : players) {
-            if (player1 != null) {
-                System.out.println(player1);
-                player.setPlayer(player.getPlayer());
-                player.imprimeDados();
-            }
+        for (int i = 0; i < jogadores.length; i++) {
+            System.out.println("Nome do jogador " + (i + 1) + ": ");
+            String p = scanner.nextLine();
+            jogadores[i] = new Player(p);
         }
+        System.out.println("--- JOGADORES ---");
+        for (Player jogador : jogadores) {
+            jogador.imprimeDados();
+        }
+
         scanner.close();
     }
 }
