@@ -6,7 +6,7 @@ public class Atividade01 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-       int num1, num2, soma;
+        int num1, num2, soma;
 
         System.out.println("Digite um numero inteiro: ");
         num1 = sc.nextInt();
