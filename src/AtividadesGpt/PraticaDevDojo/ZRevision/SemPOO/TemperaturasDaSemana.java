@@ -3,7 +3,7 @@ package AtividadesGpt.PraticaDevDojo.ZRevision.SemPOO;
 import java.util.Scanner;
 
 public class TemperaturasDaSemana {
-   public static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double[] temperaturas = new double[7];
 
@@ -30,15 +30,25 @@ public class TemperaturasDaSemana {
         double media = soma / temperaturas.length;
 
         System.out.println(" ==== DADOS ====");
-        System.out.println("Maior temperatura registrada: " + maior);
-        System.out.println("Menor temperatura registrada: " + menor);
-        System.out.println("Temperatura média registrada: " + media);
+        System.out.println("Maior temperatura registrada: " + maior + "°C");
+        System.out.println("Menor temperatura registrada: " + menor + "°C");
+        System.out.printf("Temperatura média registrada: %.2f°C%n ", media);
 
         System.out.println();
+
+        String[] dias = {
+                "Segunda",
+                "Terça",
+                "Quarta",
+                "Quinta",
+                "Sexta",
+                "Sábado",
+                "Domingo"
+        };
         System.out.println("==== POSIÇÕES ====");
         for (int i = 0; i < temperaturas.length; i++) {
-            System.out.println((i + 1) + "° dia - " + temperaturas[i]);
+            System.out.println(dias[i] + " - " + temperaturas[i] + "°C");
         }
-
+        scanner.close();
     }
 }
