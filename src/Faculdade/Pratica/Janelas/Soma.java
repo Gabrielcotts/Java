@@ -1,6 +1,7 @@
 package Faculdade.Pratica.Janelas;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Soma {
     public static void main(String[] args) {
@@ -15,6 +16,8 @@ public class Soma {
                     "Entrada inválida! Você deve digitar dois números.",
                     "Erro",
                     JOptionPane.ERROR_MESSAGE);
+            Toolkit.getDefaultToolkit().beep();
+
         } else {
             num1 = Double.parseDouble(entradaNum1);
             num2 = Double.parseDouble(entradaNum2);
