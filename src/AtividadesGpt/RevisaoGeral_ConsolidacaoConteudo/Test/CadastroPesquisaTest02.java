@@ -34,7 +34,7 @@ public class CadastroPesquisaTest02 {
 
         System.out.println("Números digitados: ");
         for (double p : pesquisa) {
-            System.out.println("(" + p + ")");
+            System.out.print("(" + p + ")");
         }
 
         System.out.println("---- RESULTADO DA PESQUISA ----");
