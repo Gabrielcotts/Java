@@ -1,10 +1,12 @@
 //Código para maior entendimento de POO
 
-package MaratonaJava.test;
-import MaratonaJava.dominio.Calculadora;
+package DevDojo.JavaCore.BintroduçãoDeMetodos.test;
+
+import DevDojo.JavaCore.BintroduçãoDeMetodos.dominio.Calculadora;
+
 
 public class CalculadoraTest05 {
-    public static void main(String[] args) {
+    public static void main(String... args) {
 
         Calculadora calculadora = new Calculadora();
         int a = 1;
@@ -13,5 +15,13 @@ public class CalculadoraTest05 {
         System.out.println("\nCalculadoratest05");
         System.out.println(a);
         System.out.println(b);
+
+
+        System.out.println("--------------");
+        int[] numeros = {1, 2, 3, 4, 5};
+        calculadora.somaArray(numeros);
+
+        System.out.println("-------------");
+        calculadora.somaVarArgs(/*valor,*/1,2,3,4,5,6,7);
     }
 }
