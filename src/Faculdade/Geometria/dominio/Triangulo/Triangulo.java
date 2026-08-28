@@ -12,11 +12,11 @@ public class Triangulo {
         this.lado3 = lado3;
     }
 
-    public Triangulo() {}
+    public Triangulo() {
+    }
 
     public double calcularArea() {
-        double area = base * altura / 2;
-        return area;
+        return (base * altura) / 2;
     }
 
     public double calcularPerimetro() {
