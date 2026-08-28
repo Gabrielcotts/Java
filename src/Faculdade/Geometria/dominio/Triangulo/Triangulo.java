@@ -26,7 +26,7 @@ public class Triangulo {
     public void imprimeDadosTriangulo() {
         System.out.println("Base: " + base);
         System.out.println("Altura: " + altura);
-        System.out.println("area: " + calcularArea());
+        System.out.println("Area: " + calcularArea());
         System.out.println("Perimetro: " + calcularPerimetro());
     }
 
