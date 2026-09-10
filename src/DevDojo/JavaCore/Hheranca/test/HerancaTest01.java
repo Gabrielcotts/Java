@@ -4,7 +4,7 @@ import DevDojo.JavaCore.Hheranca.dominio.Endereco;
 import DevDojo.JavaCore.Hheranca.dominio.Funcionario;
 import DevDojo.JavaCore.Hheranca.dominio.Pessoa;
 
-public class HerancaTest {
+public class HerancaTest01 {
     static void main(String[] args) {
         Endereco endereco = new Endereco();
         endereco.setRua("Rua pacheco");
