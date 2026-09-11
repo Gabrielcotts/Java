@@ -22,12 +22,10 @@ public abstract class Curso {
     public int getDuracaoSemestres() {
         return duracaoSemestres;
     }
-
-    // Método concreto
+
     public void exibirInformacoes() {
         System.out.println("Código: " + codigo + " | Curso: " + nome + " | Duração: " + duracaoSemestres + " semestres");
     }
-
-    // Método abstrato (será implementado pelas subclasses)
+
     public abstract double calcularMensalidade();
 }
