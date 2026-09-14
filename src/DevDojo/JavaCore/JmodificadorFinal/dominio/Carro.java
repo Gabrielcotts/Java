@@ -2,6 +2,8 @@ package DevDojo.JavaCore.JmodificadorFinal.dominio;
 
 public class Carro {
     private String nome;
+    public final Comprador COMPRADOR = new Comprador();
+
 //    public static final double VELOCIDADE_LIMITE = 250;
 
 //    public final double VELOCIDADE_LIMITE;
