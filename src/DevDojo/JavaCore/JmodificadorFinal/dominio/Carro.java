@@ -1,5 +1,6 @@
 package DevDojo.JavaCore.JmodificadorFinal.dominio;
 
+//public final class Carro {
 public class Carro {
     private String nome;
     public final Comprador COMPRADOR = new Comprador();
@@ -20,6 +21,10 @@ public class Carro {
     public static final double VELOCIDADE_LIMITE;
     static {
         VELOCIDADE_LIMITE = 250;
+    }
+
+    public final void imprimeDados(){
+        System.out.println("Nome: " + this.nome);
     }
 
     public String getNome() {
