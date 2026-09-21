@@ -1,9 +1,9 @@
 package DevDojo.JavaCore.Kenum.dominio;
 
 public class Cliente_Com_Enum02 {
-    public enum TipoPagamento{
-        DEBITO, CREDITO
-    }
+    // public enum TipoPagamento{
+    //     DEBITO, CREDITO
+    // }
 
     private String nome;
     private  TipoCliente tipoCliente;
