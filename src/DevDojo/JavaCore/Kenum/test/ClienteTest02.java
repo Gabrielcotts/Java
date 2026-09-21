@@ -1,8 +1,8 @@
 package DevDojo.JavaCore.Kenum.test;
 
 import DevDojo.JavaCore.Kenum.dominio.Cliente_Com_Enum02;
-import DevDojo.JavaCore.Kenum.dominio.Cliente_Com_Enum02.TipoPagamento;
 import DevDojo.JavaCore.Kenum.dominio.TipoCliente;
+import DevDojo.JavaCore.Kenum.dominio.TipoPagamento;
 
 public class ClienteTest02 {
     public static void main(String[] args) {
