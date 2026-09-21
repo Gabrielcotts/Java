@@ -4,8 +4,8 @@ public enum TipoCliente {
     PESSOA_FISICA(1, "Pessoa Física"),
     PESSOA_JURIDICA(2, "Pessoa Jurídica");
 
-    public final int VALOR;
-    public String nomeRelatorio;
+    private final int VALOR;
+    private String nomeRelatorio;
 
     TipoCliente(int valor, String nomeRelatorio) {
         this.VALOR = valor;
@@ -14,5 +14,9 @@ public enum TipoCliente {
 
     public String getNomeRelatorio() {
         return nomeRelatorio;
+    }
+
+    public int getVALOR() {
+        return VALOR;
     }
 }
