@@ -9,10 +9,11 @@ public class CarroEletrico extends Carro implements Eletrico, Conectavel, Rastre
     }
 
     public CarroEletrico() {
+        super();
     }
 
     @Override
-    public void imprimirDados() {
+    public void exibirDados() {
         System.out.println("=== CARRO ELETRICO ===");
         System.out.println("Marca: " + getMarca());
         System.out.println("Modelo: " + getModelo());

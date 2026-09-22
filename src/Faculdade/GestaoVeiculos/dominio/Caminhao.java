@@ -1,33 +1,23 @@
 package Faculdade.GestaoVeiculos.dominio;
 
 public class Caminhao extends Veiculo {
-    private double capacidadeCarga;
 
-    public Caminhao(String marca, String modelo, int ano, double velocidadeAtual, double capacidadeCarga) {
+    public Caminhao(String marca, String modelo, int ano, double velocidadeAtual) {
         super(marca, modelo, ano, velocidadeAtual);
-        this.capacidadeCarga = capacidadeCarga;
     }
 
     public Caminhao() {
+        super();
     }
 
     @Override
-    public void imprimirDados() {
+    public void exibirDados() {
         System.out.println("=== CAMINHAO ===");
-        super.imprimirDados();
-        System.out.println("Capacidade de carga: " + capacidadeCarga + " toneladas");
+        super.exibirDados();
     }
 
     @Override
     public void realizarManutencao() {
-        System.out.println("Verificação dos freios, pneus e capacidade de carga.");
-    }
-
-    public double getCapacidadeCarga() {
-        return capacidadeCarga;
-    }
-
-    public void setCapacidadeCarga(double capacidadeCarga) {
-        this.capacidadeCarga = capacidadeCarga;
+        System.out.println("Verificação dos freios e dos pneus.");
     }
 }

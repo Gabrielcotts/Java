@@ -1,6 +1,7 @@
 package Faculdade.GestaoVeiculos.dominio;
 
-public class Eletrico {
-    public void carregarBateria(){}
+public interface Eletrico {
+    void carregarBateria();
 
+    int getNivelBateria();
 }

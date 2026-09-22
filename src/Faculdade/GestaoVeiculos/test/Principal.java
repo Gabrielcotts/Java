@@ -14,10 +14,37 @@ import java.util.List;
 
 public class Principal {
     public static void main(String[] args) {
-        Carro carro = new Carro("Toyota", "Corolla", 2022, 0, 4);
-        Moto moto = new Moto("Honda", "CG 160", 2023, 0, true);
-        Caminhao caminhao = new Caminhao("Volvo", "FH", 2021, 0, 30);
-        CarroEletrico carroEletrico = new CarroEletrico("BYD", "Dolphin", 2024, 0, 4);
+
+        Carro carro = new Carro(
+                "Toyota",
+                "Corolla",
+                2022,
+                0,
+                4
+        );
+
+        Moto moto = new Moto(
+                "Honda",
+                "CG 160",
+                2023,
+                0,
+                true
+        );
+
+        Caminhao caminhao = new Caminhao(
+                "Volvo",
+                "FH",
+                2021,
+                0
+        );
+
+        CarroEletrico carroEletrico = new CarroEletrico(
+                "BYD",
+                "Dolphin",
+                2024,
+                0,
+                4
+        );
 
         carro.acelerar(20);
         carro.acelerar();
@@ -28,7 +55,9 @@ public class Principal {
         caminhao.acelerar(10);
         carroEletrico.acelerar(25);
 
+        // Cadastro dos veículos na lista.
         List<Veiculo> frota = new ArrayList<>();
+
         frota.add(carro);
         frota.add(moto);
         frota.add(caminhao);
@@ -36,8 +65,9 @@ public class Principal {
 
         System.out.println("=== FROTA ===");
 
+        // Utilização do polimorfismo.
         for (Veiculo veiculo : frota) {
-            veiculo.imprimirDados();
+            veiculo.exibirDados();
             veiculo.realizarManutencao();
             System.out.println("---------");
         }
@@ -46,29 +76,41 @@ public class Principal {
 
         System.out.println("---------");
         System.out.println("Busca por marca/modelo: Toyota");
+
         buscarVeiculos(frota, "Toyota");
 
         System.out.println("---------");
         System.out.println("Busca por marca/modelo: Dolphin");
+
         buscarVeiculos(frota, "Dolphin");
 
         System.out.println("---------");
 
+        // Acessar somente as capacidades específicas.
         for (Veiculo veiculo : frota) {
+
             if (veiculo instanceof Eletrico) {
                 Eletrico eletrico = (Eletrico) veiculo;
+
                 eletrico.carregarBateria();
-                System.out.println("Bateria: " + eletrico.getNivelBateria() + "%");
+
+                System.out.println(
+                        "Bateria: " + eletrico.getNivelBateria() + "%"
+                );
             }
 
             if (veiculo instanceof Conectavel) {
                 Conectavel conectavel = (Conectavel) veiculo;
+
                 conectavel.conectarInternet();
             }
 
             if (veiculo instanceof Rastreavel) {
                 Rastreavel rastreavel = (Rastreavel) veiculo;
-                System.out.println("Localização: " + rastreavel.obterLocalizacao());
+
+                System.out.println(
+                        "Localização: " + rastreavel.obterLocalizacao()
+                );
             }
         }
     }
@@ -77,10 +119,14 @@ public class Principal {
         boolean encontrou = false;
 
         for (Veiculo veiculo : frota) {
+
             if (veiculo.getMarca().toLowerCase().contains(busca.toLowerCase()) ||
                     veiculo.getModelo().toLowerCase().contains(busca.toLowerCase())) {
-                veiculo.imprimirDados();
+
+                veiculo.exibirDados();
+
                 System.out.println("---------");
+
                 encontrou = true;
             }
         }

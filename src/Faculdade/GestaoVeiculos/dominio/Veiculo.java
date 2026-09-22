@@ -19,16 +19,7 @@ public abstract class Veiculo {
     }
 
     public Veiculo() {
-    }
-
-    @Override
-    public String toString() {
-        return "Veiculo{" +
-                "marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", ano=" + ano +
-                ", velocidadeAtual=" + velocidadeAtual +
-                '}';
+        this("", "", 1886, 0);
     }
 
     public void acelerar(double valor) {
@@ -73,7 +64,7 @@ public abstract class Veiculo {
         return velocidadeAtual >= 0;
     }
 
-    public void imprimirDados() {
+    public void exibirDados() {
         System.out.println("Marca: " + marca);
         System.out.println("Modelo: " + modelo);
         System.out.println("Ano: " + ano);

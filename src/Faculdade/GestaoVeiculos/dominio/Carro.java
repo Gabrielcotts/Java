@@ -9,12 +9,13 @@ public class Carro extends Veiculo {
     }
 
     public Carro() {
+        super();
     }
 
     @Override
-    public void imprimirDados() {
+    public void exibirDados() {
         System.out.println("=== CARRO ===");
-        super.imprimirDados();
+        super.exibirDados();
         System.out.println("Portas: " + quantidadePortas);
     }
 

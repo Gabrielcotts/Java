@@ -9,12 +9,13 @@ public class Moto extends Veiculo {
     }
 
     public Moto() {
+        super();
     }
 
     @Override
-    public void imprimirDados() {
+    public void exibirDados() {
         System.out.println("=== MOTO ===");
-        super.imprimirDados();
+        super.exibirDados();
         System.out.println("Possui partida eletrica: " + possuiPartidaEletrica);
     }
 
