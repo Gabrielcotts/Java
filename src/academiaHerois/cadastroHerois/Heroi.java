@@ -26,8 +26,7 @@ public abstract class Heroi {
         System.out.println("Mana: " + mana);
         System.out.println("Classe: " + classe);
     }
-
-    // Sobrecarga de método.
+
     public void atacar() {
         System.out.println(nome + " realizou um ataque.");
     }
