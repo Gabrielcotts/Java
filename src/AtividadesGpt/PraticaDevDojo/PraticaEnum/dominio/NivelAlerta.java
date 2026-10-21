@@ -22,7 +22,6 @@ public enum NivelAlerta {
         return NOME_RELATORIO;
     }
 
-
     //precisei de ajuda da IA para esse método completo
     public static NivelAlerta buscarPorDescricao(String decricaoBusca){
         if (decricaoBusca == null){
