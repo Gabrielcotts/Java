@@ -1,4 +1,4 @@
-package AtividadesGpt.PraticaDevDojo.PraticaAssociação.dominio;
+package AtividadesGpt.PraticaDevDojo.PraticaAssociacao.dominio;
 
 public class Bateria {
     private final double CAPACIDADE_MAX;
@@ -12,7 +12,7 @@ public class Bateria {
     public Bateria(double CAPACIDADE_MAX, double capacidadeAtual) {
         if (capacidadeAtual < 0 || capacidadeAtual > CAPACIDADE_MAX) {
             throw new IllegalArgumentException(
-                    "Capacidade da bateria tem que estar entre 0 e 100"
+                    "Capacidade atual da bateria tem que estar entre 0 e " + CAPACIDADE_MAX
             );
         }
         this.CAPACIDADE_MAX = CAPACIDADE_MAX;
@@ -31,7 +31,7 @@ public class Bateria {
 
     @Override
     public String toString() {
-        return " ===== Bateria =====" +
+        return "===== Bateria =====" +
 
                 "\nCapacidade máxima = " + CAPACIDADE_MAX  + "% "+
                 "\nCapacidade atual = " + capacidadeAtual + "% ";
